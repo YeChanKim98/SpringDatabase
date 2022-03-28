@@ -1,0 +1,32 @@
+
+// 갱신 및 새로운 설정 이 후, 우측 상단에 그레이들 로고에 새로고침 표시가 달린 버튼을 눌러서 변경된 세팅을 저장 시켜줄 수 있다
+// 내용 변경 후 우측 상단에 버튼이 생기지 않을시, 우측에 세로로 있는 그레이들 탭에 들어가서 '새로고침'버튼을 눌러준다
+
+plugins {
+	id 'org.springframework.boot' version '2.5.1'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'Hello'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '8'
+
+repositories {
+	mavenCentral()
+	//위에 지정한 mavenCentral이라는 사이트에서 이하 의존하는 파일을 받아오기 위한 설정
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	//implementation 'org.springframework.boot:spring-boot-starter-jdbc' // JDBC 드라이버
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // JPA용. JDBC는 주석처리
+	runtimeOnly 'com.h2database:h2' // JDBC와 붙을 BD 클라이언트 지정
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+}
+
+test {
+	useJUnitPlatform()
+}

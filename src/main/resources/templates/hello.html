@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;  charset=UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+  <p th:text="'Hello ' + ${data}">  Hello User</p>
+  <!-- 템플릿을 사용하면 태그 값이 치환되지만, 이용하지 않으면 p태그 안에 값을 확인할 수 있다. 사실상 개발자들을 위한 방법임-->
+</body>
+</html>
